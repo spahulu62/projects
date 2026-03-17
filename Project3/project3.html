@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elden Ring Lore Archive</title>
+
+<link rel="stylesheet" href="project3.css">
+
+</head>
+
+<body>
+
+<div class="particles"></div>
+
+<div class="site-grid">
+
+<header>
+
+<div class="brand">
+
+<img class="logo" src="images/tarnished.png" alt="Tarnished">
+
+<h1>Elden Ring Lore Archive</h1>
+
+</div>
+
+</header>
+
+
+
+<aside>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#media">Media</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</aside>
+
+
+
+<main>
+
+<div class="content">
+
+<section id="home">
+
+<h2>The Lands Between</h2>
+
+<div class="home-hero">
+
+<div class="hero-text">
+
+<p>
+After the Elden Ring was shattered, the demigods of the Lands Between
+fought for control of the Great Runes. The world fell into chaos
+during an event known as the Shattering.
+</p>
+
+<p>
+You play as one of the Tarnished — warriors who return to the Lands
+Between guided by grace to restore the Elden Ring and become Elden
+Lord.
+</p>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/erdtree.jpg" alt="The Erdtree">
+
+</div>
+
+</div>
+
+
+<h3>Important Lore Concepts</h3>
+
+<div class="cards">
+
+<article>
+
+<h3>The Erdtree</h3>
+
+<p>
+The golden Erdtree dominates the skyline of the Lands Between
+and symbolizes the power of the Greater Will.
+</p>
+
+</article>
+
+
+<article>
+
+<h3>The Shattering</h3>
+
+<p>
+When Queen Marika shattered the Elden Ring, the demigods
+began a devastating war for control of its fragments.
+</p>
+
+</article>
+
+
+<article>
+
+<h3>The Tarnished</h3>
+
+<p>
+Tarnished warriors return to the Lands Between in search
+of the Elden Ring fragments to claim the title of Elden Lord.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<figure>
+
+<img src="images/dragon.jpg" alt="Dragon Boss">
+
+<figcaption>
+Flying Dragon Agheel
+</figcaption>
+
+
+
+</figure>
+
+
+<div class="gallery-grid">
+
+<img src="images/stormveil.png" alt="Dragon Battle">
+
+<img src="images/radahn.webp" alt="Starscourge Radahn">
+
+<img src="images/malenia.jpg" alt="Malenia Blade of Miquella">
+
+</div>
+
+</section>
+
+
+
+<section id="media">
+
+<h2>Elden Ring Lore Explained</h2>
+
+<p>
+This video explains the deeper lore of the Lands Between,
+including the demigods and the Shattering.
+</p>
+
+<div class="video-wrap">
+
+<iframe
+src="https://www.youtube.com/embed/DYDs_Inzkz4"
+title="Elden Ring Lore"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>Contact the Tarnished</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Roundtable Hold</h3>
+<p>A gathering place for Tarnished champions.</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Message Signs</h3>
+<p>Leave messages for fellow Tarnished.</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>The Lands Between</h3>
+<p>Seek the Elden Ring and become Elden Lord.</p>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<p>© 2026 Elden Ring Lore Archive</p>
+
+</footer>
+
+</div>
+
+
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sections.forEach(section => {
+
+const sectionTop = section.offsetTop - 150;
+
+if (pageYOffset >= sectionTop) {
+current = section.getAttribute("id");
+}
+
+});
+
+if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+current = "contact";
+}
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if (link.getAttribute("href") === "#" + current) {
+link.classList.add("active");
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
